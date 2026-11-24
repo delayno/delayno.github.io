@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Delay no more</title>
-  <style>
-    body {
-      background-color: #111;
-      color: #ccc;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#05070c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="description" content="Tap the ball. Keep it in the air.">
+<title>Bounce</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome</h1>
+  <div id="stage"></div>
+
+  <div id="hud">
+    <div id="count">0</div>
+    <div id="label">bounces</div>
+    <div id="stats">streak <b id="streak">0</b> <span class="sep">·</span> best <b id="best">0</b></div>
+  </div>
+
+  <div id="hint">tap the ball</div>
+  <div id="vignette"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
