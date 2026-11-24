@@ -227,7 +227,7 @@
     /* rings */
     for (var q = 0; q < RING_N; q++) {
       var rg = new Graphics();
-      rg.circle(0, 0, 50).stroke({ width: 2.4, color: 0x9beeff, alpha: 1, alignment: 0.5 });
+      rg.circle(0, 0, 50).stroke({ width: 2, color: 0x9beeff, alpha: 1, alignment: 0.5 });
       rg.visible = false;
       ringLayer.addChild(rg);
       rings.push({ g: rg, life: 0, max: 1, x: 0, y: 0, r0: 40 });
@@ -636,10 +636,10 @@
         continue;
       }
       var t = 1 - r.life / r.max;
-      var radius = r.r0 + V.r * 2.9 * t;
+      var radius = r.r0 + V.r * 2.2 * t;
       r.g.position.set(r.x, r.y);
       r.g.scale.set(radius / 50);
-      r.g.alpha = (1 - t) * (1 - t);
+      r.g.alpha = 0.85 * (1 - t) * (1 - t) * (1 - t * 0.35);
     }
   }
 
@@ -661,8 +661,8 @@
       var f = 1 - i / TRAIL_N;
       s.visible = true;
       s.position.set(p.x, p.y);
-      s.width = s.height = V.r * 1.4 * f;
-      s.alpha = 0.26 * k * f * f;
+      s.width = s.height = V.r * 1.25 * f;
+      s.alpha = 0.20 * k * f * f;
       s.tint = 0xa9e9ff;
     }
   }
