@@ -281,7 +281,7 @@
 
     app.renderer.resize(w, h);
 
-    V.r = clamp(Math.min(w, h) * 0.062, 16, 46);
+    V.r = clamp(Math.min(w, h) * 0.072, 18, 52);
     V.floor = h - Math.max(18, h * 0.05);
     V.g = h * 2.15;
 
